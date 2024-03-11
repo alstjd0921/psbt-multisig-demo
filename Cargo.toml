@@ -7,6 +7,6 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.80"
-bitcoin = { version = "0.31.1", features = ["rand", "rand-std", "serde"] }
-btc-transaction-utils = "0.9.0"
+hex_lit = "0.1.1"
+miniscript = "11.0.0"
 psbt-v2 = "0.1.1"
