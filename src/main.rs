@@ -1,7 +1,7 @@
 mod p2wsh_generation_example;
 mod psbt_generation_example;
 
-use crate::p2wsh_generation_example::create_3of2_p2wsh_example;
+use crate::p2wsh_generation_example::create_2of3_p2wsh_example;
 use miniscript::bitcoin::{consensus, secp256k1::Secp256k1};
 use miniscript::psbt::PsbtExt;
 use std::collections::BTreeMap;
@@ -13,7 +13,7 @@ pub const RECEIVE_ADDRESS: &str = "bcrt1qurj4xpaw95jlr28lqhankfdqce7tatgkeqrk9q"
 fn main() -> anyhow::Result<()> {
     let secp = Secp256k1::new();
 
-    let (sender, signers, descriptor) = create_3of2_p2wsh_example(&secp)?;
+    let (sender, signers, descriptor) = create_2of3_p2wsh_example(&secp)?;
 
     let (signers1, signers2, signers3) = {
         let pks: Vec<_> = signers.keys().collect();

@@ -7,7 +7,7 @@ use miniscript::{DefiniteDescriptorKey, Descriptor};
 use std::collections::BTreeMap;
 use std::str::FromStr;
 
-pub fn create_3of2_p2wsh_example(
+pub fn create_2of3_p2wsh_example(
     secp: &Secp256k1<All>,
 ) -> anyhow::Result<(
     Address,
